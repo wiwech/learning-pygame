@@ -126,6 +126,7 @@ def drawPosition():
             body["pos"][0] %= windowWidth
             body["pos"][1] %= windowHeight
         #pygame.draw.circle(surface, (200,200,200), (math.floor(body["pos"][0]), math.floor(body["pos"][1])), body["radius"], 0) #draws filled grey circle where body is
+        #python3 interprets the below as having integer arguments. Other versions of python may require using int() to convert numbers stored as floats, even if they are in the field of integers
         pygame.draw.circle(surface, body["colour"], (math.floor(body["pos"][0]), math.floor(body["pos"][1])), body["radius"],0)
         #a lot of these references would be easier with vectors, i.e. body["pos"] could be a vector instead of putting list elements into (b[p][0],b[p][1])
 #quit the program
